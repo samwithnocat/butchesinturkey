@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>
+    Jasmin's Birthday Portal
+  </title>
+  <h1> JASMINS BIRTHDAY PORTAL </h1>
+
+  <style>
+    body {
+      height: 100vh; /* full viewport height */
+      margin: 0;
+      display: flex;
+      justify-content: center; /* horizontal centering */
+      align-items: center;     /* vertical centering */
+      flex-direction: column;  /* stack elements top to bottom */
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+<h2> write your wishes </h2>
+<form action="/submit-wish" method="post">
+  <textarea name="message" rows="5" cols="40" required></textarea><br><br>
+  <button type="submit">Send Wish</button>
+</form>
+
+</body>
+</html>

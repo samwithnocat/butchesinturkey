@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>View Wishes</title>
+  <style>
+    .wish-box {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0;
+      background-color: #f9f9f9;
+    }
+    .sender {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    .message {
+      margin-top: 5px;
+      white-space: pre-wrap; /* Preserve line breaks */
+    }
+  </style>
+</head>
+<body>
+<h1>All Wishes</h1>
+
+<div th:each="wish : ${wishes}" class="wish-box">
+  <div class="sender" th:text="'From: ' + ${wish.sender}">From: Someone</div>
+  <div class="message" th:text="${wish.message}">Your message goes here...</div>
+</div>
+
+</body>
+</html>
