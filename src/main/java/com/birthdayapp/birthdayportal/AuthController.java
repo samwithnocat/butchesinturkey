@@ -25,12 +25,12 @@ public class AuthController {
 
         System.out.println("Login attempt: name=" + name + ", password=" + password);
         Optional<User>user = userRepository.findByNameAndPassword(name, password);
-        if ("jasmin".equalsIgnoreCase(name) && password.equals("secret")) {
+        if ("jasmin".equalsIgnoreCase(name) && password.equals("iwilleatsamout")) {
             session.setAttribute("user", name);
             return "redirect:/view-wishes";
         }
 
-        if (password.equals("wish123")) {
+        if (password.equals("iamgay")) {
             session.setAttribute("user", name);
             return "redirect:/write-wish";
         }

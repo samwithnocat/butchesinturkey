@@ -58,13 +58,6 @@ public class WishController {
 
 
 
-    @SpringBootApplication
-    public class BirthdayPortalApplication {
-        public static void main(String[] args) {
-            SpringApplication.run(BirthdayPortalApplication.class, args);
-        }
-    }
-
 
     public List<Wish> getAllWishes() {
             return repository.findAll();
